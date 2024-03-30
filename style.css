@@ -29,6 +29,7 @@ html{
   scroll-behavior: smooth;
 }
 
+
 section{
   padding: 3rem 7%;
 }
@@ -128,7 +129,9 @@ section{
 }
 em {
   font-size: 2.0rem;
+  color: #cc0c0c;
 }
+
 .header .logo i{
   color: var(--orange);
 }
@@ -185,16 +188,32 @@ em {
   text-transform: uppercase;
   color: var(--black);
 }
-
+.mentorship {
+  width: 50%;
+  height: 40%;
+  padding: 20px;
+}
 .header .login-form .box{
   width: 100%;
   margin: .7rem 0;
-  background: #eee;
+  background: #05e6f7;
   border-radius: .5rem;
   padding: 1rem;
   font-size: 1.6rem;
   color: var(--black);
   text-transform: capitalize;
+}
+.boxx {
+  color: var(--black);
+  background: #ff4343;
+  padding: 1rem;
+  font-size: 1.6rem;
+  color: var(--black);
+  text-transform: capitalize;
+  width: 100%;
+  margin: .7rem 0;
+  color: var(--white);
+  border-radius: .5rem
 }
 
 .header .login-form p{
