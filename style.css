@@ -95,13 +95,14 @@ section{
 #menu-btn {
   display: block; /* Make sure the menu button is visible on smaller screens */
   cursor: pointer;
+  margin-top: 10px;
 }
 
 /* Add this CSS to hide the navigation links by default */
 .navbar {
-  display: none;
+  display: column;
   transition: transform 0.3s ease; /* Added transition property */
-  transform: translateY(-100%); /* Start off-screen */
+  transform: translateY(0%); /* Start off-screen */
 }
 
 /* Add this CSS to show the navigation links when the menu button is clicked */
@@ -155,6 +156,7 @@ em {
 
 #menu-btn{
   display: none;
+  ;
 }
 /* Add this CSS to style the X icon */
 #menu-btn.active::before {
