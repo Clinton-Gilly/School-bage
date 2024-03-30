@@ -3,6 +3,7 @@ document.querySelector('#menu-btn').addEventListener('click', () => {
     document.querySelector('#header').classList.toggle('active');
   });
   
+  
 window.addEventListener('scroll', () => {
     const header = document.getElementById('header');
     if (window.pageYOffset > 0) {
@@ -13,17 +14,19 @@ window.addEventListener('scroll', () => {
 });
 
 let lastScrollTop = 0;
+let logo = document.querySelector('.logo');
+let navbar = document.querySelector('.navbar');
 
-window.addEventListener("scroll", function(){
-    let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-
-    if (currentScroll > lastScrollTop) {
-        // Downscroll code
-        document.querySelector(".header").classList.add("hide-nav");
+window.addEventListener("scroll", function() {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    if (scrollTop > lastScrollTop){
+        // downscroll code
+        logo.style.display = 'none'; // logo disappears
+        navbar.style.display = 'none'; // navbar disappears
     } else {
-        // Upscroll code
-        document.querySelector(".header").classList.remove("hide-nav");
+        // upscroll code
+        logo.style.display = 'block'; // logo appears
+        navbar.style.display = 'block'; // navbar appears
     }
-
-    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // For Mobile or negative scrolling
-});
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+}, false);

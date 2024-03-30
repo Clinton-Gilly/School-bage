@@ -80,20 +80,20 @@ section{
   box-shadow: var(--box-shadow);
   margin-bottom: 2rem;
 }
-.var { /* Remove stray character */
+.var { 
   display: block;
 }
 
-/* Add media query to hide the menu button on larger screens */
+
 @media screen and (min-width: 769px) {
   #menu-btn {
     display: none;
   }
 }
 
-/* Style for hamburger menu icon */
+
 #menu-btn {
-  display: block; /* Make sure the menu button is visible on smaller screens */
+  display: block; 
   cursor: pointer;
   margin-top: 10px;
 }
@@ -101,14 +101,14 @@ section{
 /* Add this CSS to hide the navigation links by default */
 .navbar {
   display: column;
-  transition: transform 0.3s ease; /* Added transition property */
-  transform: translateY(0%); /* Start off-screen */
+  transition: transform 0.3s ease;
+  transform: translateY(0%);
 }
 
-/* Add this CSS to show the navigation links when the menu button is clicked */
+
 .header.active .navbar {
-  display: block; /* Changed from block to flex */
-  flex-direction: column; /* Align links vertically */
+  display: block; 
+  flex-direction: column; 
   transform: translateY(0);
 }
 
