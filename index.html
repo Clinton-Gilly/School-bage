@@ -17,8 +17,8 @@
 
     <!-- header section starts -->
 
-    <header class="header" >
-        <a href="#" class="logo"><img src="images/Logoo-removebg-preview.png" alt=""></a>
+    <header id="header" class="header">
+        <a href="#" class="logo"><img src="images/Logoo-removebg-preview.png" alt="">RIRUTA ISRAEL EDUCATIONAL CENTRE</a>
         <nav class="navbar">
             <a href="#home">home</a>
             <a href="#about">about</a>
@@ -30,9 +30,10 @@
         <div class="icons">
             <div class="fas fa-us" id="login-btn"></div>
             <div id="menu-btn" class="fas fa-bars"></div>
-            
         </div>
     </header>
+    
+    
     <!-- header section ends -->
 
     <!-- home section starts -->
@@ -42,17 +43,15 @@
         <div class="content">
 
             <h3>welcome to our <span>RIRUTA ISRAEL EDUCATIONAL CENTRE</span></h3>
-            <h3>OBJECTIVES</h3>
-            <p><strong>Academic Excellence:</strong> We strive to provide a high-quality education that fosters academic excellence, 
+            
+           <p> We strive to provide a high-quality education that fosters academic excellence, 
             critical thinking, and a love for learning. Through rigorous curriculum standards and innovative teaching
-             methods, we empower students to achieve their full academic potential and excel in their studies. <br>
-             <p><strong>Academic Excellence:</strong> We are dedicated to instilling a lifelong love for learning and a growth mindset 
-                in our students. By fostering curiosity, creativity, and resilience, we empower students to adapt to 
-                change, embrace challenges, and pursue continuous personal and professional growth throughout their lives.</p>
-                <br><br>
+             methods, we empower students to achieve their full academic potential and excel in their studies.</p> <br>
+             
+                <br>
                 
 
-                    <em>At Riruta Israel Educational Centre, we are committed to fulfilling these objectives and providing a nurturing and inspiring
+                    <em>At Riruta Israel Educational Centre, we are committed to fulfilling and providing a nurturing and inspiring
                          environment where every student can reach their full potential and become leaders of tomorrow. Welcome to our community of
                           learners, explorers, and achievers!</em>
 
@@ -371,7 +370,7 @@
         <div class="box-container">
 
             <div class="box">
-                <h3> <i class="fas fa-school"></i>  RIRUTA ISRAEL EDUCATIONAL CENTRE </h3>
+                <h3>   <a href="#" class="logo"><img src="images/Logoo-removebg-preview.png" alt="">RIRUTA ISRAEL EDUCATIONAL CENTRE</a> </h3>
                 <p>To develop well rounded, confident and responsible individuals who aspire to achieve
                     their full potential</p>
             </div>
@@ -379,10 +378,10 @@
             <div class="box">
                 <h3>quick links</h3>
                 <a href="#"> <i class="fas fa-caret-right"></i> enroll now</a>
-                <a href="#"> <i class="fas fa-caret-right"></i> parent portal</a>
+                <a href="#"> <i class="fas fa-caret-right"></i> contact us</a>
                 <a href="#"> <i class="fas fa-caret-right"></i> school calendar</a>
-                <a href="#"> <i class="fas fa-caret-right"></i> lunch menu</a>
-                <a href="#"> <i class="fas fa-caret-right"></i> school supply list</a>
+                <a href="#"> <i class="fas fa-caret-right"></i> academic programs</a>
+                <a href="#"> <i class="fas fa-caret-right"></i> upcoming events</a>
             </div>
 
             <div class="box">
@@ -414,7 +413,9 @@
 
 
     <!-- footer section ends -->
-
+<script>
+    
+</script>
 
 
 
@@ -426,6 +427,19 @@
 
     <script>
         lightGallery(document.querySelector('.gallery .gallery-container'));
+        let lastScrollTop = 0;
+
+window.addEventListener("scroll", function() {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    if (scrollTop > lastScrollTop){
+        // downscroll code
+        document.querySelector('.logo').style.display = 'block';
+    } else {
+        // upscroll code
+        document.querySelector('.logo').style.display = 'none';
+    }
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+}, false);
     </script>
 
 </body>

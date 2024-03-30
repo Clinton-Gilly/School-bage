@@ -18,7 +18,11 @@
   text-transform: capitalize;
   transition: all .2s linear;
 }
-
+body {
+  background-image: url('images/Logoo-removebg-preview.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 html{
   font-size: 62.5%;
   overflow-x: hidden;
@@ -80,21 +84,33 @@ section{
   display: block;
 }
 
-/* Add media query for responsive navbar */
-@media screen and (max-width: 768px) {
-  .navbar {
-      display: inline-block;
-  }
-  .icons {
-      display: flex;
-  }
-  .icons .fa-bars {
-      display: block;
-  }
-  .header .logo {
-      margin-right: auto;
+/* Add media query to hide the menu button on larger screens */
+@media screen and (min-width: 769px) {
+  #menu-btn {
+    display: none;
   }
 }
+
+/* Style for hamburger menu icon */
+#menu-btn {
+  display: block; /* Make sure the menu button is visible on smaller screens */
+  cursor: pointer;
+}
+
+/* Add this CSS to hide the navigation links by default */
+.navbar {
+  display: none;
+  transition: transform 0.3s ease; /* Added transition property */
+  transform: translateY(-100%); /* Start off-screen */
+}
+
+/* Add this CSS to show the navigation links when the menu button is clicked */
+.header.active .navbar {
+  display: block; /* Changed from block to flex */
+  flex-direction: column; /* Align links vertically */
+  transform: translateY(0);
+}
+
 
 .header.scrolled {
   position: fixed;
@@ -107,7 +123,7 @@ section{
   font-size: 2.5rem;
   font-weight: bolder;
   color: var(--black);
-  margin-bottom: 0rem;
+  margin-bottom: -18rem;
 }
 em {
   font-size: 2.0rem;
@@ -140,6 +156,11 @@ em {
 #menu-btn{
   display: none;
 }
+/* Add this CSS to style the X icon */
+#menu-btn.active::before {
+  content: "X";
+}
+
 
 .header .login-form{
   position: absolute;
